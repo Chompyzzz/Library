@@ -12,7 +12,7 @@ namespace Library
 
         public string cognome { get; set; }
 
-        public string cf { get; { return nome + cognome; } }
+       // public string cf { get; { return nome + cognome; } }
 
         private int year { get; set; }
         private int month { get; set; }

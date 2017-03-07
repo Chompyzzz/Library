@@ -6,7 +6,32 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class Seeder
+   static class Seeder
+
     {
+        private static int _counter;
+
+        public static void GenerateRandomIndex(int counter)
+        {
+            Random rnd = new Random();
+            _counter = rnd.Next(0, 20);
+            Console.WriteLine(_counter);
+
+        } 
+
+            
+
+
+        public class List<Utenti>
+        {
+        
+        }
+
+
+
+      
+
+
+
     }
 }
