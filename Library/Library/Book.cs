@@ -12,23 +12,42 @@ namespace Library
 
         public string autore { get; set; }
 
-        //public enum genere { ci guardo poi; }
+        public string genere { get; set; }
 
-        public int isbn { get; set; }
+        public string isbn { get; set; }
 
-        public Book(string titolo, string autore, string genere, int isbn)
+        public bool prestato { get; set; } = false;
+        
+
+        public Book(string titolo, string autore, string genere, string isbn)
         {
             this.titolo = titolo;
             this.autore = autore;
 
-            if (isbn < 0) isbn = isbn + 1;
+            this.genere = genere;
             this.isbn = isbn;
 
+            describe();
         }
 
-        public void describe()
+        public string describe()
         {
+            string output = "Il libro scelto è un " + genere + " di nome " + titolo + "\r\n";
+            output += " scritto da " + autore + " \r\n";
+            output += " Ed ha codice " + isbn + ". \r\n";
 
+            if (!prestato)
+            {
+                output += "Il libro è disponibile per essere prestato.";
+
+            }
+            else  
+            {
+                output += " Il libro è in prestito a " + u.nome + ".";
+            }
+
+
+            return output;
         }
 
         public override string ToString() 
@@ -37,11 +56,11 @@ namespace Library
 
         }
 
-        public void describeBooks()
+        public void presta(User u)
         {
-
+            prestato = true;
         }
-
+ 
 
 
     }
