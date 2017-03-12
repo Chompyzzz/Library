@@ -43,7 +43,7 @@ namespace Library
             }
             else  
             {
-                output += " Il libro è in prestito a " + u.nome + ".";
+                output += " Il libro è già in prestito.";
             }
 
 
@@ -56,9 +56,12 @@ namespace Library
 
         }
 
-        public void presta(User u)
+        public string presta(User u)
         {
             prestato = true;
+            string output = " Il libro è stato prestato all' utente " + u.cognome + " " + u.nome;
+
+            return output;
         }
  
 
