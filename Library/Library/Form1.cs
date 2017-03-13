@@ -16,12 +16,16 @@ namespace Library
         public Form1()
         {
             InitializeComponent();
-            
+
+            //Seeder.GenerateRandomIndex();
+            Seeder.UserCharacteristics();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void DescribeUser_Click(object sender, EventArgs e)
@@ -34,5 +38,12 @@ namespace Library
         {
             Txt.Text = BooksListbox.SelectedValue.ToString();
         }
+
+        
+
+
     }
+
+    
+
 }
