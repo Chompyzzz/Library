@@ -55,11 +55,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(39, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Utenti:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -81,11 +81,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(617, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Libri:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -93,7 +93,7 @@
             // DescribeUser
             // 
             this.DescribeUser.BackColor = System.Drawing.SystemColors.Control;
-            this.DescribeUser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescribeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescribeUser.Location = new System.Drawing.Point(65, 336);
             this.DescribeUser.Name = "DescribeUser";
             this.DescribeUser.Size = new System.Drawing.Size(115, 43);
@@ -105,18 +105,19 @@
             // DescribeBook
             // 
             this.DescribeBook.BackColor = System.Drawing.SystemColors.Control;
-            this.DescribeBook.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescribeBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescribeBook.Location = new System.Drawing.Point(519, 336);
             this.DescribeBook.Name = "DescribeBook";
             this.DescribeBook.Size = new System.Drawing.Size(115, 43);
             this.DescribeBook.TabIndex = 5;
             this.DescribeBook.Text = "Informazioni";
             this.DescribeBook.UseVisualStyleBackColor = false;
+            this.DescribeBook.Click += new System.EventHandler(this.DescribeBook_Click);
             // 
             // Lend
             // 
             this.Lend.BackColor = System.Drawing.SystemColors.Control;
-            this.Lend.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lend.Location = new System.Drawing.Point(306, 384);
             this.Lend.Name = "Lend";
             this.Lend.Size = new System.Drawing.Size(115, 43);

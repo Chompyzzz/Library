@@ -21,13 +21,18 @@ namespace Library
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void DescribeUser_Click(object sender, EventArgs e)
         {
             Txt.Text = UsersListbox.SelectedValue.ToString();
 
+        }
+
+        private void DescribeBook_Click(object sender, EventArgs e)
+        {
+            Txt.Text = BooksListbox.SelectedValue.ToString();
         }
     }
 }

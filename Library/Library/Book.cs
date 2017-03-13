@@ -26,8 +26,6 @@ namespace Library
 
             this.genere = genere;
             this.isbn = isbn;
-
-            describe();
         }
 
         public string describe()
@@ -64,7 +62,5 @@ namespace Library
             return output;
         }
  
-
-
     }
 }
