@@ -18,5 +18,6 @@ namespace Library
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
     }
 }
