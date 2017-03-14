@@ -17,9 +17,8 @@ namespace Library
         {
             InitializeComponent();
 
-            //Seeder.GenerateRandomIndex();
-            Seeder.UserCharacteristics();
-
+            Seeder.GenerateBook();
+             
 
         }
 
