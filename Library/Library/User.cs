@@ -30,7 +30,7 @@ namespace Library
 
         public string describe()
         {
-            string outputUser = "L'utente selezionato è " + nome + " " + cognome " \r\n" ;
+            string outputUser = "L'utente selezionato è " + nome + " " + cognome + " \r\n" ;
 
             outputUser += "il suo codice fiscale è " + cf + " ed è nato il " + birth;
 
