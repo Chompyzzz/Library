@@ -50,7 +50,7 @@ namespace Library
 
         public override string ToString() 
         {
-            return titolo + isbn;
+            return titolo + ' ' + isbn;
 
         }
 

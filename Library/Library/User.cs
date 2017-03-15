@@ -43,10 +43,10 @@ namespace Library
             return nome + " " + cognome ;
         }
 
-        public string libriPosseduti (Book b)
-        {
+       // public string libriPosseduti (Book b)
+        
 
-        }
+        
 
 
     }

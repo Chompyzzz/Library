@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Library
 {
@@ -28,19 +30,28 @@ namespace Library
 
         static string[] isbn = { "23435", "23545", "57212", "26572", "14562", "14576", "21462", "54876 ", "72547", "46246", "56731", "12567", "14683", "24367", "13467", "13489", "76521", "45763", "87223", "46514" };
 
-        static string[] genere = { "Giallo", "Romanzo formativo", "Giallo", "Thriller", "Romanzo rosa", "Narrativa", "Fantasy", "Fantascientifico", "Storico", "Ghisa" };
+        static string[] genere = { "Giallo", "Romanzo formativo", "Horror", "Thriller", "Romanzo rosa", "Narrativa", "Fantasy", "Fantascientifico", "Storico", "Ghisa" };
 
 
-        public static void GenerateBook()
+
+
+        public static void GenerateBook(ListBox t)
         {
             for (int i = 0; i < 20; i++)
             {
-     
-                Book b = new Book(titolo[rnd.Next(0, 20)], autore[rnd.Next(0,20)], genere[rnd.Next(0,10)], isbn[rnd.Next(0,20)] );
-                
-                Book[i] Libri = b;
-                      
-            }
+
+                Book b = new Book(titolo[i], autore[i], genere[rnd.Next(0, 10)], isbn[i]);
+
+                t.Items.Add(b);
+
+            }         
+        }
+
+          public static void ListBook(Book b)
+        {
+
+        }
+
         }
 
     }
@@ -52,5 +63,5 @@ namespace Library
 
 
 
-    }
+    
 

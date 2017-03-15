@@ -17,10 +17,12 @@ namespace Library
         {
             InitializeComponent();
 
-            Seeder.GenerateBook();
-             
 
+            Seeder.GenerateBook(BooksListbox );
+
+      
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
