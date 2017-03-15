@@ -16,6 +16,9 @@ namespace Library
 
         public DateTime birth { get { return birth.Date; } }
 
+        public int count { get; set;  }
+
+
         public User(string nome, string cognome, string cf, DateTime birth)
         {
             nome = this.nome;
@@ -28,19 +31,36 @@ namespace Library
 
         }
 
+
         public string describe()
         {
             string outputUser = "L'utente selezionato è " + nome + " " + cognome + " \r\n" ;
 
-            outputUser += "il suo codice fiscale è " + cf + " ed è nato il " + birth;
+            outputUser += "il suo codice fiscale è " + cf + " ed è nato il " + birth + " . \r\n" ;
+
+            outputUser += "Attualmente ha " + count + " libri da restituire . ";
 
             return outputUser; 
 
         }
 
+
         public override string ToString()
         {
             return nome + " " + cognome ;
+        }
+
+
+        List<Book> ownedBook = new List<Book>();
+
+        public int nBook( Book b )
+        {
+            ownedBook.Add(b);
+
+            count = ownedBook.Count;
+
+            return count ;
+            
         }
 
        // public string libriPosseduti (Book b)
