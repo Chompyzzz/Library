@@ -14,7 +14,7 @@ namespace Library
         
         public string cf { get { return nome + cognome;  } }
 
-        public DateTime birth { get { return birth.Date; } }
+        public DateTime birth { get; set; }
 
         public User(string nome, string cognome, string cf, DateTime birth)
         {

@@ -20,7 +20,8 @@ namespace Library
 
             Seeder.GenerateBook(BooksListbox );
 
-      
+            Seeder.GenereateUser(UsersListbox);
+
         }
 
 
@@ -37,7 +38,8 @@ namespace Library
 
         private void DescribeBook_Click(object sender, EventArgs e)
         {
-            Txt.Text = BooksListbox.SelectedValue.ToString();
+            Txt.Text = BooksListbox.SelectedItem.ToString();
+           // Txt.Text = BooksListbox.SelectedValue.ToString();
         }
 
         
