@@ -31,9 +31,9 @@ namespace Library
 
         public string describe()
         {
-            string output = "Il libro scelto è un " + genere + " di nome " + titolo + "\r\n";
-            output += " scritto da " + autore + " \r\n";
-            output += " Ed ha codice " + isbn + ". \r\n";
+            string output = "Il libro scelto è un " + genere + " di nome " + titolo + System.Environment.NewLine;
+            output += "scritto da " + autore + System.Environment.NewLine;
+            output += "Ed ha codice " + isbn + System.Environment.NewLine;
 
             if (!prestato)
             {
@@ -42,7 +42,7 @@ namespace Library
             }
             else  
             {
-                output += " Il libro è già in prestito.";
+                output += "Il libro è già in prestito.";
             }
 
 
@@ -55,10 +55,14 @@ namespace Library
 
         }
 
+
         public string presta(User u)
         {
             prestato = true;
-            string output = " Il libro è stato prestato all' utente " + u.cognome + " " + u.nome;
+            u.ownedBook.Add(this);
+
+            string output = "Il libro è stato prestato all' utente " + u.cognome + " " + u.nome + System.Environment.NewLine;
+            output += "ed è stato aggiunto alla sua lista personale. ";
 
             return output;
         }

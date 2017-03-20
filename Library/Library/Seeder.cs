@@ -42,21 +42,20 @@ namespace Library
                 Book b = new Book(titolo[i], autore[i], genere[rnd.Next(0, 9)], isbn[i]);
 
                 t.Items.Add(b);
-
             }
         }
 
-        
-
-        public static void GenereateUser(ListBox t)
+        // ho corretto dallo user di bonna che il codice fiscale era messo come somma di nome+cognome, mentre tu volevi assegnarli stringhe casuali
+        // mettetevi d'accordo
+        public static void GenerateUser(ListBox l)
         {
+            DateTime birth = new DateTime(2001, 01, 01);// chiediamo come metterla random e se ci riusciamo questo programma spacca i culi xDDD 11!!LoL
+
             for (int i = 0; i < 20; i++)
             {
-                DateTime birth = new DateTime(2001,01,01 );
+                User u = new User(nomi[rnd.Next(0,19)], cognomi[rnd.Next(0, 19)], cf[rnd.Next(0, 19)], birth.Date);
 
-                User u = new User(nomi[rnd.Next(0,19)], cognomi[rnd.Next(0,19)], cf[rnd.Next(0,19)], birth.Date );
-
-                t.Items.Add(u);            
+                l.Items.Add(u);            
             }
         }
 

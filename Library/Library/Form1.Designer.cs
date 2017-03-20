@@ -36,16 +36,14 @@
             this.DescribeBook = new System.Windows.Forms.Button();
             this.Lend = new System.Windows.Forms.Button();
             this.Txt = new System.Windows.Forms.TextBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // UsersListbox
             // 
             this.UsersListbox.FormattingEnabled = true;
             this.UsersListbox.Items.AddRange(new object[] {
-            "i nomi",
-            "e i cognomi",
-            "degli utenti",
-            "del seeder"});
+            "NOME\tCOGNOME"});
             this.UsersListbox.Location = new System.Drawing.Point(42, 40);
             this.UsersListbox.Name = "UsersListbox";
             this.UsersListbox.Size = new System.Drawing.Size(185, 290);
@@ -68,10 +66,7 @@
             // 
             this.BooksListbox.FormattingEnabled = true;
             this.BooksListbox.Items.AddRange(new object[] {
-            "i titoli",
-            "e i codici",
-            "dei libri",
-            "del seeder"});
+            "TITOLO\tCODICE"});
             this.BooksListbox.Location = new System.Drawing.Point(480, 40);
             this.BooksListbox.Name = "BooksListbox";
             this.BooksListbox.Size = new System.Drawing.Size(185, 290);
@@ -118,12 +113,13 @@
             // 
             this.Lend.BackColor = System.Drawing.SystemColors.Control;
             this.Lend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lend.Location = new System.Drawing.Point(306, 384);
+            this.Lend.Location = new System.Drawing.Point(303, 336);
             this.Lend.Name = "Lend";
             this.Lend.Size = new System.Drawing.Size(115, 43);
             this.Lend.TabIndex = 6;
             this.Lend.Text = "Presta";
             this.Lend.UseVisualStyleBackColor = false;
+            this.Lend.Click += new System.EventHandler(this.Lend_Click);
             // 
             // Txt
             // 
@@ -166,6 +162,7 @@
         private System.Windows.Forms.Button DescribeBook;
         private System.Windows.Forms.Button Lend;
         private System.Windows.Forms.TextBox Txt;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

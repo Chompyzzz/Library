@@ -17,34 +17,37 @@ namespace Library
         {
             InitializeComponent();
 
-
-            Seeder.GenerateBook(BooksListbox );
-
-            Seeder.GenereateUser(UsersListbox);
-
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Seeder.GenerateBook(BooksListbox);
 
+            Seeder.GenerateUser(UsersListbox);
         }
 
         private void DescribeUser_Click(object sender, EventArgs e)
         {
-            Txt.Text = UsersListbox.SelectedValue.ToString();
-
+            User u = UsersListbox.SelectedItem as User;
+            Txt.Text = u.describe();
         }
 
         private void DescribeBook_Click(object sender, EventArgs e)
         {
-            Txt.Text = BooksListbox.SelectedItem.ToString();
-           // Txt.Text = BooksListbox.SelectedValue.ToString();
+            Book b = BooksListbox.SelectedItem as Book;
+            Txt.Text = b.describe();
         }
 
-        
+        private void Lend_Click(object sender, EventArgs e)
+        {
+            Book b = BooksListbox.SelectedItem as Book;
+            User u = UsersListbox.SelectedItem as User;
+            Txt.Text = b.presta(u) + u.describeBooks(b);
+            //vedo se riesco ad implementare qualcos'altro. sto facendo troppi commenti a sproposito
+            //ad esempio avevo pensato ad un if che non ti permette di prestare più libri uguali(perchè ora si puo fare)
 
-
+        }
     }
 
     
