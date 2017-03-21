@@ -44,14 +44,13 @@ namespace Library
             }
         }
 
-        // ho corretto dallo user di bonna che il codice fiscale era messo come somma di nome+cognome, mentre tu volevi assegnarli stringhe casuali
-        // mettetevi d'accordo
+
         public static void GenerateUser(ListBox l)
         {
             for (int i = 0; i < 20; i++)
             {
                 DateTime birth = new DateTime(rnd.Next(1998, 2002), rnd.Next(1, 12), rnd.Next(1, 30));
-                User u = new User(nomi[rnd.Next(0,19)], cognomi[rnd.Next(0, 19)], cf[rnd.Next(0, 19)], birth.Date);
+                User u = new User(nomi[rnd.Next(0,19)], cognomi[rnd.Next(0, 19)], cf[rnd.Next(0, 19)] , birth.Date);
 
                 l.Items.Add(u);            
             }

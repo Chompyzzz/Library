@@ -44,9 +44,6 @@ namespace Library
             Book b = BooksListbox.SelectedItem as Book;
             User u = UsersListbox.SelectedItem as User;
             Txt.Text = b.presta(u) + u.describeBooks(b);
-            //vedo se riesco ad implementare qualcos'altro. sto facendo troppi commenti a sproposito
-            //ad esempio avevo pensato ad un if che non ti permette di prestare più libri uguali(perchè ora si puo fare)
-
         }
     }
 

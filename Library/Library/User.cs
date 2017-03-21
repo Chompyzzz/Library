@@ -11,8 +11,8 @@ namespace Library
         public string nome { get; set; }
 
         public string cognome { get; set; }
-        
-        public string cf { get; set; }//vedi seeder di jack
+
+        public string cf { get; set; }  
 
         public DateTime birth { get; set; }
 
@@ -37,7 +37,7 @@ namespace Library
 
             outputUser += "il suo codice fiscale è " + cf + " ed è nato il " + birth + " . \r\n" ;
 
-            outputUser += "Attualmente ha " + ownedBook.Count + " libri da restituire . ";
+            outputUser += "Attualmente ha " + ownedBook.Count + " libri da restituire " ;
 
             return outputUser; 
 
@@ -50,28 +50,20 @@ namespace Library
         }
 
 
-        public List<Book> ownedBook = new List<Book>();// andava messa public
+        public List<Book> ownedBook = new List<Book>();
 
-        public int nBook( Book b )// questa non la capisco
-        {
-            ownedBook.Add(b);
-
-            count = ownedBook.Count;
-
-            return count ;
-            
-        }
 
         public string describeBooks(Book b)
         {
             string output = "L' utente possiede i seguenti libri: " + System.Environment.NewLine;
-            
-            output += b.ToString(); //momentaneo, bisogna far vedere tutti i libri e non solo l'ultimo come succede.
+
+            for (int i = 0; i < ownedBook.Count + 1; )
+            {
+                output += b.ToString() + " \r\n ";
+            }
 
             return output;
         }
-
-        
 
 
     }

@@ -58,13 +58,23 @@ namespace Library
 
         public string presta(User u)
         {
-            prestato = true;
-            u.ownedBook.Add(this);
+            string output;
 
-            string output = "Il libro è stato prestato all' utente " + u.cognome + " " + u.nome + System.Environment.NewLine;
-            output += "ed è stato aggiunto alla sua lista personale. ";
+            if (!prestato)
+            {
+                prestato = true;
+                u.ownedBook.Add(this);
 
-            return output;
+                output = "Il libro è stato prestato all' utente " + u.cognome + " " + u.nome + System.Environment.NewLine;
+                output += "ed è stato aggiunto alla sua lista personale. ";
+
+            }
+            else
+            {
+                 output = "Il libro è già in prestito";
+            }
+
+            return output; 
         }
  
     }
