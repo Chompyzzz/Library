@@ -55,16 +55,24 @@ namespace Library
 
         public string describeBooks(Book b)
         {
-            string output = "L' utente possiede i seguenti libri: " + System.Environment.NewLine;
+            string output;
 
-            for (int i = 0; i < ownedBook.Count + 1; )
+            if (ownedBook.Count != 0)
             {
-                output += b.ToString() + " \r\n ";
+                output = "L' utente possiede i seguenti libri: " + System.Environment.NewLine;
+               
+            }
+            else
+            {
+                output = "L'utente non possiede ancora alcun libro.";
+            }
+
+            for (int i = 0; i < ownedBook.Count; i++)
+            {
+                output += ownedBook[i].ToString() + "\r\n ";
             }
 
             return output;
         }
-
-
     }
 }

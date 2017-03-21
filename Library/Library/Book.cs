@@ -60,6 +60,7 @@ namespace Library
         {
             string output;
 
+
             if (!prestato)
             {
                 prestato = true;
@@ -71,7 +72,7 @@ namespace Library
             }
             else
             {
-                 output = "Il libro è già in prestito";
+                 output = "Il libro è già in prestito. " + System.Environment.NewLine;
             }
 
             return output; 
