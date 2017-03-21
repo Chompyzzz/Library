@@ -20,7 +20,7 @@ namespace Library
 
             Seeder.GenerateBook(BooksListbox );
 
-            Seeder.GenereateUser(UsersListbox);
+            Seeder.GenerateUser(UsersListbox);         
 
         }
 
