@@ -59,7 +59,7 @@ namespace Library
 
             if (ownedBook.Count != 0)
             {
-                output = "L' utente possiede i seguenti libri: " + System.Environment.NewLine;
+                output = "L' utente possiede i seguenti libri: " + System.Environment.NewLine + System.Environment.NewLine ;
                
             }
             else
@@ -69,7 +69,7 @@ namespace Library
 
             for (int i = 0; i < ownedBook.Count; i++)
             {
-                output += ownedBook[i].ToString() + "\r\n ";
+                output += ownedBook[i].ToString() + "\r\n" + "\r\n ";
             }
 
             return output;
