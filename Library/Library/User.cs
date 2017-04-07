@@ -33,9 +33,9 @@ namespace Library
 
         public string describe()
         {
-            string outputUser = "L'utente selezionato è " + nome + " " + cognome + " \r\n" ;
+            string outputUser = "L'utente selezionato è " + nome + " " + cognome + Environment.NewLine  ;
 
-            outputUser += "il suo codice fiscale è " + cf + " ed è nato il " + birth + " . \r\n" ;
+            outputUser += "il suo codice fiscale è " + cf + " ed è nato il " + birth.ToShortDateString() + Environment.NewLine ;
 
             outputUser += "Attualmente ha " + ownedBook.Count + " libri da restituire " ;
 
@@ -69,7 +69,7 @@ namespace Library
 
             for (int i = 0; i < ownedBook.Count; i++)
             {
-                output += ownedBook[i].ToString() + "\r\n" + "\r\n ";
+                output += i + ' ' + ownedBook[i].ToString() + Environment.NewLine  + Environment.NewLine;
             }
 
             return output;

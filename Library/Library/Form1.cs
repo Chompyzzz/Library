@@ -25,7 +25,13 @@ namespace Library
             Seeder.GenerateBook(BooksListbox);
 
             Seeder.GenerateUser(UsersListbox);
+
+            BooksListbox.SelectedIndex = 1;
+
+            UsersListbox.SelectedIndex = 1; 
         }
+
+       
 
         private void DescribeUser_Click(object sender, EventArgs e)
         {
