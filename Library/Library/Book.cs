@@ -17,7 +17,8 @@ namespace Library
 
         public string isbn { get; set; }
 
-        public bool prestato { get; set; } = false;
+        private bool _prestato = false;
+        public bool prestato { get { return _prestato; } }
         
 
         public Book(string titolo, string autore, string genere, string isbn)
@@ -51,7 +52,7 @@ namespace Library
 
         public override string ToString() 
         {
-            return titolo + ' ' + isbn;
+            return titolo + "  " + isbn;
 
         }
 
@@ -60,22 +61,17 @@ namespace Library
         {
             string output;
 
+            if (prestato) throw new Exception("Il libro è già in prestito");
 
-            if (!prestato)
-            {
-                prestato = true;
-                u.ownedBook.Add(this);
+            if (u.ownedBook.Count >= 6) throw new Exception("Si è raggiunto il limite massimo di " + u.ownedBook.Count + " libri prestati"); 
 
-                output = "Il libro è stato prestato all' utente " + u.cognome + " " + u.nome + System.Environment.NewLine;
-                output += "ed è stato aggiunto alla sua lista personale. ";
+            _prestato = true;
+            u.ownedBook.Add(this);
 
-            }
-            else
-            {
-                 output = "Il libro è già in prestito. " + System.Environment.NewLine;
-            }
-
-            return output; 
+            output = "Il libro è stato prestato all' utente " + u.cognome + " " + u.nome + System.Environment.NewLine;
+            output += "ed è stato aggiunto alla sua lista personale. ";
+            
+            return output;
         }
  
     }

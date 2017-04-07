@@ -66,7 +66,7 @@
             // 
             this.BooksListbox.FormattingEnabled = true;
             this.BooksListbox.Items.AddRange(new object[] {
-            "TITOLO\tCODICE"});
+            "TITOLO\t  CODICE"});
             this.BooksListbox.Location = new System.Drawing.Point(480, 40);
             this.BooksListbox.Name = "BooksListbox";
             this.BooksListbox.Size = new System.Drawing.Size(185, 290);
@@ -123,11 +123,12 @@
             // 
             // Txt
             // 
-            this.Txt.Enabled = false;
             this.Txt.Location = new System.Drawing.Point(277, 40);
             this.Txt.Multiline = true;
             this.Txt.Name = "Txt";
-            this.Txt.Size = new System.Drawing.Size(157, 211);
+            this.Txt.ReadOnly = true;
+            this.Txt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Txt.Size = new System.Drawing.Size(157, 223);
             this.Txt.TabIndex = 7;
             // 
             // Form1

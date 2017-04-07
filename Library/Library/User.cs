@@ -69,7 +69,7 @@ namespace Library
 
             for (int i = 0; i < ownedBook.Count; i++)
             {
-                output += i + ' ' + ownedBook[i].ToString() + Environment.NewLine  + Environment.NewLine;
+                output += (i+1) + ". " + ownedBook[i].ToString() + Environment.NewLine;
             }
 
             return output;

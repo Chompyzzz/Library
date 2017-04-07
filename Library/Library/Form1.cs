@@ -26,9 +26,7 @@ namespace Library
 
             Seeder.GenerateUser(UsersListbox);
 
-            BooksListbox.SelectedIndex = 1;
 
-            UsersListbox.SelectedIndex = 1; 
         }
 
        
@@ -37,19 +35,44 @@ namespace Library
         {
             User u = UsersListbox.SelectedItem as User;
             Txt.Text = u.describe();
+            if (u == null)
+            {
+                MessageBox.Show("Bisogna selezionare un utente", "Errore!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void DescribeBook_Click(object sender, EventArgs e)
         {
             Book b = BooksListbox.SelectedItem as Book;
             Txt.Text = b.describe();
+            if (b == null)
+            {
+                MessageBox.Show("Bisogna selezionare un libro", "Errore!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void Lend_Click(object sender, EventArgs e)
         {
             Book b = BooksListbox.SelectedItem as Book;
             User u = UsersListbox.SelectedItem as User;
-            Txt.Text = b.presta(u) + u.describeBooks(b);
+
+            if (u == null || b == null)
+            {
+                MessageBox.Show("Bisogna selezionare almeno un libro ed un utente", "Errore!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+           
+
+            try
+            {
+                Txt.Text = b.presta(u) + u.describeBooks(b);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Attenzione!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 
