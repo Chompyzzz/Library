@@ -16,7 +16,7 @@ namespace Library
 
         public DateTime birth { get; set; }
 
-        public int count { get; set;  }
+        public List<Book> ownedBook = new List<Book>();
 
 
         public User(string nome, string cognome, string cf, DateTime birth)
@@ -48,9 +48,6 @@ namespace Library
         {
             return nome + " " + cognome ;
         }
-
-
-        public List<Book> ownedBook = new List<Book>();
 
 
         public string describeBooks(Book b)
