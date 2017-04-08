@@ -34,20 +34,34 @@ namespace Library
         private void DescribeUser_Click(object sender, EventArgs e)
         {
             User u = UsersListbox.SelectedItem as User;
-            Txt.Text = u.describe();
+            
             if (u == null)
             {
                 MessageBox.Show("Bisogna selezionare un utente", "Errore!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            else
+            {
+                Txt.Text = u.describe();
+                return;
             }
         }
 
         private void DescribeBook_Click(object sender, EventArgs e)
         {
             Book b = BooksListbox.SelectedItem as Book;
-            Txt.Text = b.describe();
+       
             if (b == null)
             {
                 MessageBox.Show("Bisogna selezionare un libro", "Errore!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            else
+            {
+                Txt.Text = b.describe();
+                return;
             }
         }
 
